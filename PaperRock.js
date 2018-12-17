@@ -15,40 +15,26 @@ Compare the two choices and determine a winner.
 Start the program and display the results. */
 
 
-const getUserChoice = function(userInput){
+const getUserChoice = (userInput) => {
     userinput = userInput.toLowerCase();
-    if (userInput === 'rock') {
-      return userInput;
-    }else if (userInput === 'paper') {
-      return userInput;
-    }else if (userInput === 'scissors'){ 
-        return userInput;
-    } else {
-      console.log('Wrong choice');
-    }
-  }
+    const choices = ['rock', 'paper', 'scissors'];
+    return choices.indexOf(userInput) > -1 ? userInput : console.log('Wrong choice');
+}
   
-  console.log(getUserChoice('paper'));
+  getUserChoice('paper');
   console.log(getUserChoice('fork'));
   
   const randomNumber = Math.floor(Math.random() *3);
   
-  const getComputerChoice = function(randomNumber) {
-    if (randomNumber === 0) {
-      return 'paper';
-    }else if (randomNumber === 1) {
-      return 'rock';
-    }else if (randomNumber === 2){ 
-        return 'scissors';
-    } else {
-      console.log('Wrong choice');
-    }
-  }
+  const getComputerChoice = (randomNumber) => {
+    const choices = ['rock', 'paper', 'scissors'];
+    return choices.indexOf(randomNumber) > -1 ? randomNumber :  console.log('Wrong choice');
+  
   
   console.log(getComputerChoice(randomNumber));
   
   
-  const determineWinner = function(userChoice, computerChoice) {
+  const determineWinner = (userChoice, computerChoice) => {
     if (userChoice === computerChoice){
       return 'Tie!'
     }
@@ -72,14 +58,9 @@ const getUserChoice = function(userInput){
   console.log(determineWinner('rock',randomNumber));
   
   
-  const playGame = function(userChoice, computerChoice) {
-    userChoice = getUserChoice();
-    computerChoice = getComputerChoice(randomNumber);
-    determineWinner(userChoice,computerChoice)
+  const playGame = (userChoice, computerChoice) => {
+    
+    let determineWinner = (getUserChoice(),getComputerChoice(randomNumber));
   }
   
   console.log(determineWinner(playGame));
-  
-  
-  
-  
