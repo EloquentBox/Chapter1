@@ -1,0 +1,1 @@
+https://www.codecademy.com/courses/introduction-to-javascript/lessons/scope/exercises/global-scope?action=resume_content_item

@@ -71,3 +71,91 @@ const getRandEvent = () => {
   logTime(name2, days2);
   
   
+
+  /*TEST:
+
+  1. What will be the output of this code?
+
+  const roadTrip = () => {
+  const destination = 'Crater Lake, Oregon';
+  const snacks = 'trail mix';
+  const supplies = 'sleeping bags';
+};
+
+console.log(`Next stop: ${destination}`);
+
+ANSWER: Uncaught ReferenceError: destination is not defined
+
+BECAUSE: Since destination is declared in the function, it is not available in the global scope.
+Back
+
+
+
+2. How many global variables are there in the following block of code?
+
+const input = 8;
+const controlVal = input / 2 + 3;
+
+const multiplier = (number, phase) => {
+  const val = number * controlVal + phase;
+  console.log(val);
+};
+
+ANSWER: There are three: input, controlVal, and multiplier.
+
+BECAUSE: Since these are defined outside of a block, they are in the global scope.
+
+
+
+3. What is preferable: defining variables in the global scope or defining variables in the block scope?
+
+ANSWER: Defining variables in the block scope. Variables defined in the global scope can cause unexpected behavior in our code.
+
+BECAUSE: Global scope can make things like variable collision (using the same variable for two different purposes) more common.
+
+
+4. What will be the output of this code?
+
+let sayHello = 'Hi there';
+const sayGoodbye = 'Goodbye';
+
+const speakItalian = () => {
+  sayHello = 'Ciao!';
+  console.log(sayHello);
+  console.log(sayGoodbye);
+};
+
+speakItalian();
+
+ANSWER: Ciao!
+Goodbye
+
+BECAUSE: he value of sayHello is changed to 'Ciao!' within the function.
+
+
+5. Which variables possess block scope?
+
+const input = 8;
+const controlVal = input / 2 + 3;
+
+const multiplier = (number, phase) => {
+  const val = number * controlVal + phase;
+  console.log(val);
+};
+
+ANSWER: number, phase, val
+
+BECAUSE: These variables are in the global scope.
+
+
+6. What is a globally scoped variable?
+
+ANSWER: A variable that is accessible to any part of the program.
+
+
+
+7. Which best defines a variable with block scope?
+
+A variable that is defined within a block and only available inside a block.
+
+*/
